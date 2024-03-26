@@ -6,8 +6,10 @@ internal class Program
     {
         Ajoneuvo auto = new Ajoneuvo();
 
-        auto.Nimi = "Toyotaa";
+        auto.Nimi = "Toyota";
         auto.Nopeus = 160;
         auto.Renkaat = 4;
+
+        auto.TulostaData();
     }
 }
