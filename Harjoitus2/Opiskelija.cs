@@ -8,5 +8,6 @@ namespace Harjoitus2
 {
     internal class Opiskelija
     {
+
     }
 }
