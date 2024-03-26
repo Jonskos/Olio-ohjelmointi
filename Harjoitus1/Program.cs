@@ -11,5 +11,7 @@ internal class Program
         auto.Renkaat = 4;
 
         auto.TulostaData();
+        Console.WriteLine();
+        Console.WriteLine(auto.ToString());
     }
 }

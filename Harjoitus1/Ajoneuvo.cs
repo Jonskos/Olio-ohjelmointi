@@ -22,7 +22,7 @@ namespace Harjoitus1
         } 
         public string ToString()
         {
-            string merkkijono = "Ajoneuvo: Nimi: " + Nimi + "Nopeus: " + Nopeus + "Renkaat: " + Renkaat;
+            string merkkijono = $"Ajoneuvo: Nimi: {Nimi} Nopeus: {Nopeus} Renkaat: {Renkaat}";
             return merkkijono;
         }
     }
