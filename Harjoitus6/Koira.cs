@@ -8,6 +8,9 @@ namespace Harjoitus6
 {
     internal class Koira : Eläin
     {
-
+        public override void Puhu()
+        {
+            Console.WriteLine("Koira puhuu.");
+        }
     }
 }

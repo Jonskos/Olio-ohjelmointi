@@ -9,11 +9,15 @@ namespace Harjoitus6
     internal class Eläin
     {
         public string genus;
-        private int instanssit = 0;
+        public static int instanssit = 0;
 
         public Eläin()
         {
             instanssit++;
+        }
+        public virtual void Puhu()
+        {
+            Console.WriteLine("Eläin puhuu.");
         }
     }
 }
