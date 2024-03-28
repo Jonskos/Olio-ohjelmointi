@@ -56,7 +56,7 @@ namespace Harjoitus7
                 for (int i = Kerros; i < paateKerros; i++)
                 {
                     Console.WriteLine("Kerros " + i);
-                    Thread.Sleep(1000);
+                    Thread.Sleep(500);
                 }
             }
             else if (Kerros > 0)
@@ -64,7 +64,7 @@ namespace Harjoitus7
                 for (int i = Kerros; i > paateKerros; i--)
                 {
                     Console.WriteLine("Kerros " + i);
-                    Thread.Sleep(1000);
+                    Thread.Sleep(500);
                 }
             }
             else
