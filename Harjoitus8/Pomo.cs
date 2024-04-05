@@ -11,14 +11,17 @@ namespace Harjoitus8
         private string auto;
         private int boonus;
         private int pomoInstansseja;
-        public Pomo(string auto, int boonus)
+        public Pomo(string nimi, string työpaikka, int palkkaKK, string auto, int boonus)
         {
-            pomoInstansseja++;
             this.auto = auto;
             this.boonus = boonus;
-            if (pomoInstansseja = 1)
+            if (pomoInstansseja <= 1)
             {
-                
+                throw new Exception("Ei saa olla enemmän kun yksi pomo");
+            }
+            else
+            {
+                pomoInstansseja++;
             }
         }
     }
