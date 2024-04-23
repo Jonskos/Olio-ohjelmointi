@@ -10,19 +10,39 @@ namespace Harjoitus8
     {
         private string auto;
         private int boonus;
-        private int pomoInstansseja;
+        private int pomoInstansseja = 0;
+        private int PomoInstansseja
+        {
+            get { return pomoInstansseja; }
+            set
+            {
+                if (value > 2)
+                {
+                    throw new ArgumentException("Value out of range");
+                }
+                else
+                {
+                    pomoInstansseja = value;
+                }
+            }
+        }
         public Pomo(string nimi, string työpaikka, int palkkaKK, string auto, int boonus)
         {
+            this.nimi = nimi;
+            this.työpäaikka = työpaikka;
             this.auto = auto;
+            this.palkkaKK = palkkaKK;
             this.boonus = boonus;
-            if (pomoInstansseja <= 1)
+            
+            try
             {
-                throw new Exception("Ei saa olla enemmän kun yksi pomo");
+                PomoInstansseja++;
             }
-            else
+            catch (Exception e)
             {
-                pomoInstansseja++;
+                Console.WriteLine("Liian paljon pomojojja");
             }
+            
         }
     }
 }
