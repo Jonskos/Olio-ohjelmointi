@@ -9,7 +9,7 @@ namespace Harjoitus8
     internal abstract class Henkilö
     {
         public string nimi;
-        public string työpäaikka;
+        public string työpaikka;
         public int palkkaKK;
     }
 }

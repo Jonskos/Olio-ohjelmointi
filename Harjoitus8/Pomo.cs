@@ -29,7 +29,7 @@ namespace Harjoitus8
         public Pomo(string nimi, string työpaikka, int palkkaKK, string auto, int boonus)
         {
             this.nimi = nimi;
-            this.työpäaikka = työpaikka;
+            this.työpaikka = työpaikka;
             this.auto = auto;
             this.palkkaKK = palkkaKK;
             this.boonus = boonus;
