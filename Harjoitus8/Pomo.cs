@@ -38,7 +38,7 @@ namespace Harjoitus8
             {
                 PomoInstansseja++;
             }
-            catch (Exception e)
+            catch
             {
                 Console.WriteLine("Liian paljon pomojojja");
             }

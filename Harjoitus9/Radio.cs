@@ -12,15 +12,18 @@ namespace Harjoitus9
         private int aanenvoimakkuus;
         private float taajuus;
 
-        private int Aanenvoimakkuus
+        public int Aanenvoimakkuus
         {
-            get
-            { return aanenvoimakkuus; }
+            get { return aanenvoimakkuus; }
             set
             {
-                if (value < 0)
+                if (value > 10)
                 {
-                    Console.WriteLine("Error: ");
+                    throw new ArgumentException("Value too high");
+                }
+                else if (value < 0)
+                {
+                    throw new ArgumentException("Value too low");
                 }
                 else
                 {
@@ -28,5 +31,37 @@ namespace Harjoitus9
                 }
             }
         }
+        public float Taajuus
+        {
+            get { return taajuus; }
+            set
+            {
+                if (value < 88)
+                {
+                    throw new ArgumentException("Value too low");
+                }
+                else if (value > 107.9)
+                {
+                    throw new ArgumentException("Value too highi");
+                }
+                else
+                {
+                    taajuus = value;
+                }
+            }
+        }
+        public void Kytkin(bool paalla)
+        {
+            this.paalla = paalla;
+        }
+        public void AanenvoimakkuusSaadin(int aanenvoimakkuus)
+        {
+            this.Aanenvoimakkuus = aanenvoimakkuus;
+        }
+        public void TaajuusSaadin(float taajuus)
+        {
+            this.Taajuus = taajuus;
+        }
+        
     }
 }
