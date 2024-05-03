@@ -43,9 +43,9 @@ internal class Program
                     {
                         radio.TaajuusSaadin(taajuus);
                     }
-                    catch (Exception e)
+                    catch (Exception ex)
                     {
-                        Console.WriteLine(e);
+                        Console.WriteLine(ex);
                     }
                     foreach (KeyValuePair<float, string> i in Kanava.kanavat)
                     {
@@ -70,9 +70,9 @@ internal class Program
                     {
                         radio.AanenvoimakkuusSaadin(aanenvoimakkuus);
                     }
-                    catch (Exception e)
+                    catch (Exception ex)
                     {
-                        Console.WriteLine(e);
+                        Console.WriteLine(ex);
                     }
                     Console.WriteLine("Radio on nyt " + radio.Aanenvoimakkuus);
                     break;
