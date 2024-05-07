@@ -9,22 +9,30 @@ namespace Harjoitus11
     internal class Opiskelija
     {
         private static HashSet<int> OpiskelijaIDLista = new HashSet<int>();
+        private void LisaaOpiskelija(int opiskelijaID)
+        {
+            if (OpiskelijaIDLista.Add(opiskelijaID))
+            {
+                this.OpiskelijaID = opiskelijaID;
+            }
+            else
+            {
+                throw new ArgumentException("ID on virheellinen");
+            }
+        }
         private string Etunimi;
         private string Sukunimi;
         private string Ryhtmätunnus;
         private int OpiskelijaID;
-        public Opiskelija(string etunimi, string sukunimi, string ryhtmätunnus, int id)
+        public Opiskelija(string etunimi, string sukunimi, string ryhtmätunnus, int opiskelijaID)
         {
             this.Etunimi = etunimi;
             this.Sukunimi = sukunimi;
             this.Ryhtmätunnus = ryhtmätunnus;
-            if (OpiskelijaIDLista.Add(id))
+            try { LisaaOpiskelija(opiskelijaID); }
+            catch (Exception ex)
             {
-                this.OpiskelijaID = id;
-            }
-            else
-            {
-                throw new Exception("ID on virheellinen");
+                Console.WriteLine(ex);
             }
         }
     }
