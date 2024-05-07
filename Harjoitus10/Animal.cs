@@ -9,6 +9,6 @@ namespace Harjoitus10
     internal class Animal
     {
         private string name;
-        private void MakeASound();
+        private void MakeASound() { }
     }
 }
