@@ -8,9 +8,14 @@ namespace Harjoitus13
 {
     internal class Pelaaja
     {
-        private string Etunimi;
-        private string Sukunimi;
-        private int PelaajaNumero;
-
+        public string etunimi { get; }
+        public string sukunimi { get; }
+        public int pelaajaNumero { get; }
+        public Pelaaja(string _etunimi, string _sukunimi, int _pelaajaNumero)
+        {
+            etunimi = _etunimi;
+            sukunimi = _sukunimi;
+            pelaajaNumero = _pelaajaNumero;
+        }
     }
 }
