@@ -46,5 +46,17 @@ namespace Harjoitus12
                 Console.WriteLine("{0}. kortti pakassa on {1} - {2}", i, korttipakka[i].maa, korttipakka[i].numero);
             }
         }
+        public void Shuffle()
+        {
+            Random random = new Random();
+            int n = korttipakka.Count;
+            for (int i = 0; i < (n - 1); i++)
+            {
+                int r = i + random.Next(n - i);
+                Kortti t = korttipakka[r];
+                korttipakka[r] = korttipakka[i];
+                korttipakka[i] = t;
+            }
+        }
     }
 }

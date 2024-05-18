@@ -6,9 +6,8 @@ internal class Program
     {
         Korttipakka korttipakka = new Korttipakka();
         korttipakka.TulostaPakka();
-        /*foreach (string entry in korttipakka.maat)
-        {
-            Console.WriteLine(entry);
-        }*/
+        korttipakka.Shuffle();
+        Console.WriteLine();
+        korttipakka.TulostaPakka();
     }
 }
