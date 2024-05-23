@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Harjoitus5
 {
-    internal static class Laskin
+    public static class Laskin
     {
         public static float Summa(float a, float b)
         {
