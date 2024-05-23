@@ -31,14 +31,14 @@
                     <TextBlock Text="Keittiön valot" FontSize="15" Padding="5" HorizontalAlignment="Center"/>
                     <TextBlock Text="Valojen tila" FontSize="12" Padding="5" HorizontalAlignment="Center" TextWrapping="Wrap"/>
                     <TextBlock x:Name="keittiöValotTila" Text="Valojen tila placeholder" FontSize="12" Padding="5" HorizontalAlignment="Center" TextWrapping="Wrap"/>
-                    <Button x:Name="keittiöValotBtn" Content="Placeholder" HorizontalAlignment="Center"  Width="100" Click="KeittiöValotBtn_OnClick"/>
+                    <Button x:Name="keittiöValotBtn" Content="Placeholder" Padding="5" HorizontalAlignment="Center"  Width="100" Click="KeittiöValotBtn_OnClick"/>
 
                 </StackPanel>
                 <StackPanel Grid.Column="1">
                     <TextBlock Text="Olohuoneen valot" FontSize="15" Padding="5" HorizontalAlignment="Center"/>
                     <TextBlock Text="Valojen tila" FontSize="12" Padding="5" HorizontalAlignment="Center" TextWrapping="Wrap"/>
                     <TextBlock x:Name="olohuoneenValotTila" Text="Valojen tila placeholder" FontSize="12" Padding="5" HorizontalAlignment="Center" TextWrapping="Wrap"/>
-                    <Button x:Name="olohuoneenValotBtn" Content="Placeholder" HorizontalAlignment="Center"  Width="100" Click="OlohuoneenValotBtn_OnClick"/>
+                    <Button x:Name="olohuoneenValotBtn" Content="Placeholder" Padding="5" HorizontalAlignment="Center"  Width="100" Click="OlohuoneenValotBtn_OnClick"/>
                 </StackPanel>
             </Grid>
             
@@ -50,7 +50,10 @@
             </StackPanel>
 
             <TextBlock Text="Lämpötila" FontSize="20" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="Wrap"/>
-            <Slider Grid.Column="2" Grid.Row="1" VerticalAlignment="Center"/>
+            <DockPanel Grid.Column="2" Grid.Row="1">
+                <TextBox Text="{Binding ElementName=lämpötilaSlider, Path=Value, UpdateSourceTrigger=PropertyChanged}" DockPanel.Dock="Right" TextAlignment="Right" Width="40" VerticalAlignment="Center"/>
+                <Slider x:Name="lämpötilaSlider" Minimum="15" Maximum="30" VerticalAlignment="Center" ValueChanged="LämpötilaSlider_ValueChanged"/>
+            </DockPanel>
         </Grid>
         <TextBlock Text="TALO" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0" TextWrapping="Wrap"/>
         <TextBlock Text="Funktiot" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,70,0,0" TextWrapping="Wrap"/>

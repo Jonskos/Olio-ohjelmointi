@@ -27,7 +27,7 @@ namespace Harjoitus17
         public MainWindow()
         {
             InitializeComponent();
-            lämpötila = 0;
+            lämpötila = 19;
             keittiöValot = false;
             keittiöValotTila.Text = "Pois";
             keittiöValotBtn.Content = "Päälle";
@@ -86,6 +86,10 @@ namespace Harjoitus17
                 oviLukossaTila.Text = "Avattu";
                 oviLukossaBtn.Content = "Lukitse";
             }
+        }
+        private void LämpötilaSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            lämpötila = Convert.ToInt32(lämpötilaSlider.Value);
         }
     }
 }
