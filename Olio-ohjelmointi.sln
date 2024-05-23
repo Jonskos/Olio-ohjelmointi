@@ -27,11 +27,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Harjoitus11", "Harjoitus11\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Harjoitus12", "Harjoitus12\Harjoitus12.csproj", "{0581A2FB-CF8B-46E3-AE1C-64675BF9F64E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Harjoitus13", "Harjoitus13\Harjoitus13.csproj", "{E6736014-A2C7-42CB-9218-4AF9BA3E64A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Harjoitus13", "Harjoitus13\Harjoitus13.csproj", "{E6736014-A2C7-42CB-9218-4AF9BA3E64A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Harjoitus14", "Harjoitus14\Harjoitus14.csproj", "{94FC0D8F-AF07-4D88-A867-5E77A214805C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Harjoitus14", "Harjoitus14\Harjoitus14.csproj", "{94FC0D8F-AF07-4D88-A867-5E77A214805C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Harjoitus15", "Harjoitus15\Harjoitus15.csproj", "{66461DB5-3580-4094-A935-F880064438A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Harjoitus16", "Harjoitus16\Harjoitus16.csproj", "{141AA44C-540F-4DC5-A633-38037F1478A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,6 +101,10 @@ Global
 		{66461DB5-3580-4094-A935-F880064438A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66461DB5-3580-4094-A935-F880064438A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66461DB5-3580-4094-A935-F880064438A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{141AA44C-540F-4DC5-A633-38037F1478A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{141AA44C-540F-4DC5-A633-38037F1478A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{141AA44C-540F-4DC5-A633-38037F1478A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{141AA44C-540F-4DC5-A633-38037F1478A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
