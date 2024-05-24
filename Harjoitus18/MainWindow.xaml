@@ -17,6 +17,7 @@
                             <Setter Property="VerticalAlignment" Value="Center"/>
                             <Setter Property="MinWidth" Value="70"/>
                             <Setter Property="Padding" Value="10"/>
+                            <Setter Property="Focusable" Value="False"/>
                         </Style>
                     </Grid.Resources>
                     <Grid.ColumnDefinitions>
