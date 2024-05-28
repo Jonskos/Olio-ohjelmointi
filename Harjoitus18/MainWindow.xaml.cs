@@ -8,7 +8,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Diagnostics;
 using Harjoitus5;
 
 namespace Harjoitus18
@@ -25,20 +24,21 @@ namespace Harjoitus18
 
         private void Laskin_Click(object sender, RoutedEventArgs e)
         {
+            //Nappi, jota painettiin (castataan napiksi jotta voidaan accessaa napin numero.)
             Button laskinBtn = (Button)e.OriginalSource;
-            //näppäimistön focusattu elementti
+            //näppäimistön (ei looginen, koska käytetään textboxeja, johon kirjoitetaan.) focusattu elementti
             IInputElement focusedControl = Keyboard.FocusedElement;
-            //jos focusattu elementti on TextBox
-            if (focusedControl.ToString().Contains("System.Windows.Controls.TextBox"))
+            //jos focusattu elementti on TextBox, asettaa TextBoxin textBox
+            if (focusedControl is TextBox textBox)
             {
-                TextBox textBox = (TextBox)focusedControl;
                 //Aseta textbox textboxin textiin ja laskimen napin numeroon
-                textBox.Text = textBox.Text + laskinBtn.Content;
+                textBox.Text += laskinBtn.Content;
             }
         }
         private void Lasku_Click(object sender, RoutedEventArgs e)
         {
             Button button = (Button)e.OriginalSource;
+            //Hard codetetut textboxit, jos olisi iso projekti en tekisi, mutta tässä annan sen olla
             if (!float.TryParse(inputTb.Text, out float input1))
             {
                 throw new Exception();
@@ -47,6 +47,8 @@ namespace Harjoitus18
             {
                 throw new Exception();
             }
+            //myöskin voisin varmaan tehdä paremmin, mutta se toimií.
+            //tarkistaa, mitä funkitota käyttää.
             switch (button.Content)
             {
                 case "Summa":
