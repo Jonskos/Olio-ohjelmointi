@@ -8,7 +8,7 @@ namespace Harjoitus10
 {
     internal class Animal
     {
-        private string name;
+        private string Name {  get; set; }
         private void MakeASound() { }
     }
 }

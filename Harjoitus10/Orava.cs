@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Harjoitus10
 {
-    internal class Orava
+    internal class Orava : Animal
     {
+
     }
 }

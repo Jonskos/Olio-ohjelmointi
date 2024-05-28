@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Harjoitus10
 {
-    internal class Harakka
+    internal class Harakka : Animal, ICanFly
     {
+        public int WingSize { get; set; }
     }
 }
