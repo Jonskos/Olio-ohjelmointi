@@ -8,7 +8,7 @@ namespace Harjoitus10
 {
     internal interface ICanSwim
     {
-        private int swimSpeed;
-        private void Swim() { }
+        int SwimSpeed { get; set; }
+        private static void Swim() { }
     }
 }
