@@ -11,8 +11,8 @@ namespace Harjoitus12
     {
         //aloitusluvut
         private int korttienMaara = 52;
-        private bool jokeritPaalla = false;
-        public List<string> maat = new List<string>()
+        private bool jokeritPaalla = true;
+        public List<string> maat = new()
         {
             "Pata",
             "Risti",
@@ -38,6 +38,11 @@ namespace Harjoitus12
                     korttipakka.Add(new Kortti(maat[i], j));
                 }
             }
+            if (jokeritPaalla)
+            {
+                korttipakka.Add(new Kortti("Jokeri", 1));
+                korttipakka.Add(new Kortti("Jokeri", 2));
+            }
         }
         public void TulostaPakka()
         {
@@ -48,7 +53,7 @@ namespace Harjoitus12
         }
         public void Shuffle()
         {
-            Random random = new Random();
+            var random = new Random();
             int n = korttipakka.Count;
             for (int i = 0; i < (n - 1); i++)
             {
