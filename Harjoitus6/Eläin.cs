@@ -10,11 +10,13 @@ namespace Harjoitus6
     {
         public string genus;
         public static int instanssit = 0;
-
+        //Eläin classin konstruktori
         public Eläin()
         {
+            //lisää instanssien numeroihin, kun instantioidaan uusi eläin
             instanssit++;
         }
+        //Virtuaalinen metodi, jotka aliluokat ylikirjoittaa
         public virtual void Puhu()
         {
             Console.WriteLine("Eläin puhuu.");
