@@ -34,11 +34,8 @@ namespace Harjoitus7
         //Siirtää hissin parametreihissä olevaan kerrokseen, jos mahdollista
         public void Siirra(int paateKerros)
         {
-            //Kerros = paateKerros;
             SiirtoAnimaatio(paateKerros);
             Kerros = paateKerros;
-            Console.WriteLine("Kerros "+ kerros);
-            Console.WriteLine("Perillä.");
             Thread.Sleep(100);
         }
         //Siirtoanimaatio kerroksien välillä, parametrinä päätekerros
@@ -66,6 +63,8 @@ namespace Harjoitus7
                     Console.WriteLine("Kerros " + i);
                     Thread.Sleep(500);
                 }
+                Console.WriteLine("Kerros " + paateKerros);
+                Console.WriteLine("Perillä.");
             }
             //jos kerros on matalammalla kuin aloituskerros:
             //looppaa kerrosten läpi alaspäin, joiden pitää mennä päästä päätekerrokseen
@@ -76,6 +75,8 @@ namespace Harjoitus7
                     Console.WriteLine("Kerros " + i);
                     Thread.Sleep(500);
                 }
+                Console.WriteLine("Kerros " + paateKerros);
+                Console.WriteLine("Perillä.");
             }
             //jos on jo samassa kerroksessa
             else
