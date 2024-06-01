@@ -3,7 +3,6 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
         //Tehdään 4 uutta eläintä
         Eläin eläin = new Eläin();
         Eläin kissa = new Kissa();
