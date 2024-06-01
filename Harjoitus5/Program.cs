@@ -4,13 +4,14 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        float a;
+        //Käyttäjän input muuttuja
+        float input1;
 
         while (true)
         {
             Console.Write("Syötä numero: ");
             string syote = Console.ReadLine();
-            if (float.TryParse(syote, out a))
+            if (float.TryParse(syote, out input1))
             {
                 break;
             }
@@ -19,12 +20,13 @@ internal class Program
                 Console.WriteLine("Ei ole numero.");
             }
         }
-        float b;
+        //Käyttäjän toinen input muuttuja
+        float input2;
         while (true)
         {
             Console.Write("Syötä numero: ");
             string syote = Console.ReadLine();
-            if (float.TryParse(syote, out b))
+            if (float.TryParse(syote, out input2))
             {
                 break;
             }
@@ -33,9 +35,10 @@ internal class Program
                 Console.WriteLine("Ei ole numero.");
             }
         }
-        Console.WriteLine($"Numeroiden {a} ja {b} summa on " + Laskin.Summa(a, b));
-        Console.WriteLine($"Numeroiden {a} ja {b} erotus on " + Laskin.Erotus(a, b));
-        Console.WriteLine($"Numeroiden {a} ja {b}  on " + Laskin.Kertolasku(a, b));
-        Console.WriteLine($"Numeroiden {a} ja {b} on " + Laskin.Jako(a, b));
+
+        Console.WriteLine($"Numeroiden {input1} ja {input2} summa on " + Laskin.Summa(input1, input2));
+        Console.WriteLine($"Numeroiden {input1} ja {input2} erotus on " + Laskin.Erotus(input1, input2));
+        Console.WriteLine($"Numeroiden {input1} ja {input2}  on " + Laskin.Kertolasku(input1, input2));
+        Console.WriteLine($"Numeroiden {input1} ja {input2} on " + Laskin.Jako(input1, input2));
     }
 }
