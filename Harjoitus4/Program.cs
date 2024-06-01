@@ -3,7 +3,9 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        Albumi albumi = new Albumi("Thriller", "Michael Jackson", "mom", 3.89F);
+        //Instantioi uuden albumin
+        Albumi albumi = new Albumi("Thriller", "Michael Jackson", "Pop", 3.89F);
+        //lisää kappaleet
         albumi.LisaaKappale("Wanna Be Startin' Somethin'", 6.03F);
         albumi.LisaaKappale("Baby Be Mine", 4.20F);
         albumi.LisaaKappale("The Girl Is Mine", 3.42F);
@@ -13,6 +15,7 @@ internal class Program
         albumi.LisaaKappale("Human Nature", 4.06F);
         albumi.LisaaKappale("P.Y.T (Pretty Young Thug)", 3.59F);
         albumi.LisaaKappale("The Lady in My Life", 5F);
+        //tulostaa albumin tiedot
         albumi.TulostaTiedot();
     }
 }

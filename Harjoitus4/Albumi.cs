@@ -8,16 +8,19 @@ namespace Harjoitus4
 {
     internal class Albumi
     {
+        //instantioi listan johon laitetaan kappaleet
         private List<Kappale> kappaleet = new List<Kappale>();
+        //albumin ominaisuudet
         private string nimi;
         private string artisti;
         private string genre;
         private float hinta;
-
+        //Lisää uuden kappaleen albumiin.
         public void LisaaKappale(string nimi, float kesto)
         {
             kappaleet.Add(new Kappale(nimi, kesto, this.nimi));
         }
+        //Tulostaa albumin tiedot ja kappaleet
         public void TulostaTiedot()
         {
             Console.WriteLine("Albumin tiedot:");
@@ -32,6 +35,7 @@ namespace Harjoitus4
                 Console.WriteLine("  Kesto: " + kappale.kesto);
             }
         }
+        //Albumin constructori
         public Albumi(string nimi, string artisti, string genre, float hinta)
         {
             this.artisti = artisti;
