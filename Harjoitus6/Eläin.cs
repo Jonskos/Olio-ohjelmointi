@@ -9,6 +9,7 @@ namespace Harjoitus6
     internal class Eläin
     {
         public string genus;
+        //staattinen muuttuja joten se ei vaihdu joka eläimen välillä
         public static int instanssit = 0;
         //Eläin classin konstruktori
         public Eläin()
