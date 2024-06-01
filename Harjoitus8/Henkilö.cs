@@ -8,6 +8,7 @@ namespace Harjoitus8
 {
     internal abstract class Henkilö
     {
+        //Henkilö-luokan ominaisuudet
         public string nimi;
         public string työpaikka;
         public int palkkaKK;

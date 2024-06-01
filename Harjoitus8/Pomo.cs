@@ -11,6 +11,7 @@ namespace Harjoitus8
         private string auto;
         private int boonus;
         private int pomoInstansseja = 0;
+        //Pomoinstansseja-ominaisuus
         private int PomoInstansseja
         {
             get { return pomoInstansseja; }
@@ -18,10 +19,12 @@ namespace Harjoitus8
             {
                 if (value > 2)
                 {
+                    //jos on 3 pomoa, niin heittää uuden exceptionin
                     throw new ArgumentException("Value out of range");
                 }
                 else
                 {
+                    //muuten vaihtaa määrän
                     pomoInstansseja = value;
                 }
             }
@@ -40,6 +43,7 @@ namespace Harjoitus8
             }
             catch
             {
+                //jos on liian monta pomoa, ja tulee exception, tulosta että on liian monta.
                 Console.WriteLine("Liian paljon pomojojja");
             }
             
