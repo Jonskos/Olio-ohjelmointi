@@ -8,6 +8,7 @@ namespace Harjoitus11
 {
     internal class Opiskelija
     {
+        //HashSet opiskelijoiden Id:stä, joka antaa vain lisätä uniikkeja arvoja.
         private static HashSet<int> OpiskelijaIDLista = new HashSet<int>();
         private void LisaaOpiskelija(int opiskelijaID)
         {
@@ -24,6 +25,7 @@ namespace Harjoitus11
         private string Sukunimi;
         private string Ryhtmätunnus;
         private int OpiskelijaID;
+        //opiskelijan konstruktori
         public Opiskelija(string etunimi, string sukunimi, string ryhtmätunnus, int opiskelijaID)
         {
             this.Etunimi = etunimi;
