@@ -14,7 +14,7 @@ internal class Program
         {
             Console.WriteLine("1. Aseta taajuus");
             Console.WriteLine("2. Aseta volume");
-            string input = Console.ReadLine();
+            string? input = Console.ReadLine();
             if (int.TryParse(input, out int value))
             {
                 if (value == 1)
@@ -34,11 +34,14 @@ internal class Program
         }
         void MuunnaTaajuus()
         {
+            //looppaa kunnes on asettanut taajuuden
             while (true)
             {
                 Console.Write("Aseta taajuus: ");
+                //katsoo jos taajuus on numero
                 if (int.TryParse(Console.ReadLine(), out int taajuus))
                 {
+                    //asettaa taajuuden jos voi
                     try
                     {
                         radio.TaajuusSaadin(taajuus);
@@ -47,6 +50,7 @@ internal class Program
                     {
                         Console.WriteLine(ex);
                     }
+                    //kertoo millä kanavalla on
                     foreach (KeyValuePair<float, string> i in Kanava.kanavat)
                     {
                         if (i.Key == taajuus)
@@ -63,9 +67,11 @@ internal class Program
         {
             while (true)
             {
-                Console.Write("Aseta taajuus: ");
+                //Kysyy äänenvoimakkuutta
+                Console.Write("Aseta äänenvoimakkuus: ");
                 if (int.TryParse(Console.ReadLine(), out int aanenvoimakkuus))
                 {
+                    //asettaa äänenvoimakkuuden jos voi
                     try
                     {
                         radio.AanenvoimakkuusSaadin(aanenvoimakkuus);
@@ -74,7 +80,8 @@ internal class Program
                     {
                         Console.WriteLine(ex);
                     }
-                    Console.WriteLine("Radio on nyt " + radio.Aanenvoimakkuus);
+                    //kertoo äänenvoimakkuuden
+                    Console.WriteLine("Radion äänenvoimakkuus on nyt " + radio.Aanenvoimakkuus);
                     break;
                 }
                 else { Console.WriteLine("Aseta numero"); }

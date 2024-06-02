@@ -17,6 +17,7 @@ namespace Harjoitus9
             get { return aanenvoimakkuus; }
             set
             {
+                //Tarkistaa jos äänenvoimakkuus on liian matala tai liian korkea
                 if (value > 10)
                 {
                     throw new ArgumentException("Value too high");
@@ -36,6 +37,7 @@ namespace Harjoitus9
             get { return taajuus; }
             set
             {
+                //Tarkistaa jos taajuus on liian matala tai liian korkea
                 if (value < 88)
                 {
                     throw new ArgumentException("Value too low");
@@ -52,14 +54,17 @@ namespace Harjoitus9
         }
         public void Kytkin(bool paalla)
         {
+            //Asettaa radion tilan
             this.paalla = paalla;
         }
         public void AanenvoimakkuusSaadin(int aanenvoimakkuus)
         {
+            //Asettaa radion äänenvoimakkuuden
             this.Aanenvoimakkuus = aanenvoimakkuus;
         }
         public void TaajuusSaadin(float taajuus)
         {
+            //Asettaa radion taajuuden
             this.Taajuus = taajuus;
         }
         
