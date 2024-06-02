@@ -38,6 +38,7 @@ namespace Harjoitus12
                     korttipakka.Add(new Kortti(maat[i], j));
                 }
             }
+            //lisää jokerit pakan loppuun
             if (jokeritPaalla)
             {
                 korttipakka.Add(new Kortti("Jokeri", 1));
@@ -58,7 +59,7 @@ namespace Harjoitus12
             for (int i = 0; i < (n - 1); i++)
             {
                 int r = i + random.Next(n - i);
-                //Käytetään tuple swappia vaihtamaan paikkaa. (ei tarvitse tehdä temp variablea)
+                //Käytetään tuple swappia vaihtamaan korttien paikkaa. (ei tarvitse tehdä uutta muuttujaa)
                 (korttipakka[r], korttipakka[i]) = (korttipakka[i], korttipakka[r]);
             }
         }
