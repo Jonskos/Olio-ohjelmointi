@@ -11,7 +11,7 @@ namespace Harjoitus13
         private string Nimi;
         private string Kotikaupunki;
         private Dictionary<int, Pelaaja> Pelaajat = new Dictionary<int, Pelaaja>();
-        public Pelaaja HaePelaaja(int numero)
+        public Pelaaja? HaePelaaja(int numero)
         {
             try
             {
@@ -41,6 +41,7 @@ namespace Harjoitus13
         {
             try
             {
+                //poistetaan pelaaja pelaajan numeron kautta
                 Pelaajat.Remove(numero);
             }
             catch (Exception ex)
@@ -50,11 +51,14 @@ namespace Harjoitus13
         }
         public List<Pelaaja> HaePelaajat()
         {
+            //tekee uuden listan
             var pelaajat = new List<Pelaaja>();
+            //lisää siihen kaikki pelaajat Pelaajat dictionarysta
             foreach (Pelaaja pelaaja  in Pelaajat.Values)
             {
                 pelaajat.Add(pelaaja);
             }
+            //ja palauttaa sen
             return pelaajat;
         }
         public Joukkue(string nimi, string kotikaupunki)
