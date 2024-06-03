@@ -5,14 +5,51 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Harjoitus16"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow"
+        Height="450"
+        Width="800">
     <Grid>
-        <TextBlock Text="Kilometrit" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,120" Width="120"/>
-        <TextBox x:Name="kilometersInput" Text="Kilometrit tähän" HorizontalAlignment="Center" Margin="0,0,0,80" TextWrapping="NoWrap" VerticalAlignment="Center" Width="120" AcceptsReturn="False"/>
-        <Button Name="btnKmToMiles" Content="Convert" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="3" Width="120" Click="BtnKmToMiles_OnClick" IsDefault="True"/>
-        <Button x:Name="unitSelectBtn" Content="km" VerticalAlignment="Center" HorizontalAlignment="Left" Padding="3" Margin="478,0,0,0" Click="UnitSelectBtn_OnClick"/>
-        <TextBlock Text="Mailit" HorizontalAlignment="Center" Margin="0,80,0,0" TextWrapping="Wrap"  VerticalAlignment="Center" Width="120"/>
-        <TextBox x:Name="milesInput" Text="Miles morales" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,120,0,0" Width="120"/>
+        <TextBlock Text="Kilometrit"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Margin="0,0,0,120"
+                   Width="120" />
+        <TextBox x:Name="kilometersInput"
+                 Text="Kilometrit tähän"
+                 HorizontalAlignment="Center"
+                 Margin="0,0,0,80"
+                 TextWrapping="NoWrap"
+                 VerticalAlignment="Center"
+                 Width="120"
+                 AcceptsReturn="False" />
+        <Button Name="btnKmToMiles"
+                Content="Convert"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Padding="3"
+                Width="120"
+                Click="BtnKmToMiles_OnClick"
+                IsDefault="True" />
+        <Button x:Name="unitSelectBtn"
+                Content="km"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Left"
+                Padding="3"
+                Margin="478,0,0,0"
+                Click="UnitSelectBtn_OnClick" />
+        <TextBlock Text="Mailit"
+                   HorizontalAlignment="Center"
+                   Margin="0,80,0,0"
+                   TextWrapping="Wrap"
+                   VerticalAlignment="Center"
+                   Width="120" />
+        <TextBox x:Name="milesInput"
+                 Text="Miles morales"
+                 TextWrapping="Wrap"
+                 HorizontalAlignment="Center"
+                 VerticalAlignment="Center"
+                 Margin="0,120,0,0"
+                 Width="120" />
 
     </Grid>
 </Window>

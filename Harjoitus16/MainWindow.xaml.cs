@@ -12,7 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Diagnostics;
 
 namespace Harjoitus16
 {
@@ -23,7 +22,6 @@ namespace Harjoitus16
     {
         public MainWindow()
         {
-            Trace.WriteLine("moi");
             InitializeComponent();
         }
         private void UnitSelectBtn_OnClick(object sender, RoutedEventArgs e)
@@ -39,12 +37,10 @@ namespace Harjoitus16
         }
         private void BtnKmToMiles_OnClick(object sender, RoutedEventArgs e)
         {
-            Trace.WriteLine("moi");
             if (unitSelectBtn.Content.ToString() == "km")
             {
                 if (float.TryParse(kilometersInput.Text, out float kilometers))
                 {
-                    Trace.WriteLine("convert km to miles");
                     milesInput.Text = ConvertKmToMiles(kilometers).ToString();
                 }
                 else { throw new Exception(); }
