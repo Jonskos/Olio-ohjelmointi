@@ -19,12 +19,15 @@ namespace Harjoitus19
         public MainWindow()
         {
             InitializeComponent();
+            //Kun Window aloitaa, navigoi Kerros1:een
             mainFrame.NavigationService.Navigate(new Kerros1());
         }
+        //Navigaatio metodi, jota kerrokset kutsuvat
         public void KerrosNavigointi(object sender, RoutedEventArgs e)
         {
             Button hissiBtn = (Button)e.OriginalSource;
 
+            //tarkistaa napin numero, ja siirtyy sitten kerrokseen.
             switch (hissiBtn.Content)
             {
                 case "1":

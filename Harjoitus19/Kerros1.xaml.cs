@@ -25,7 +25,7 @@ namespace Harjoitus19
         {
             InitializeComponent();
         }
-
+        //Seuraavaan Kerrokseen navigointi
         private void NextPage_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Kerros2());
@@ -33,6 +33,7 @@ namespace Harjoitus19
         private void HissiBtnGrid_Click(object sender, RoutedEventArgs e)
         {
             //on mahdollista tehdä eventeillä, mutta en tiedä miten.
+            //kutsuu MainWindowin KerrosNavigointi metodin
             ((MainWindow)System.Windows.Application.Current.MainWindow).KerrosNavigointi(sender, e);
         }
     }

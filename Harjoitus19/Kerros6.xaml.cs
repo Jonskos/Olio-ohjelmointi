@@ -24,6 +24,7 @@ namespace Harjoitus19
         {
             InitializeComponent();
         }
+        //Edelliseen kerrokseen navigointi
         private void PrevPage_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Kerros5());
