@@ -1,0 +1,41 @@
+﻿<Window x:Class="Harjoitus20.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Harjoitus20"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel x:Name="opiskelijaPanel"
+                    Loaded="opiskelijaPanel_Loaded"
+                    HorizontalAlignment="Left"
+                    >
+            
+        </StackPanel>
+
+        <Grid VerticalAlignment="Bottom">
+            <Button x:Name="lisääOpiskelija"
+                    Content="Lisää Opiskelija"
+                    HorizontalAlignment="Left"
+                    Padding="10"
+                    Click="lisääOpiskelija_Click" />
+            <Button x:Name="poistaOpiskelija"
+                    Content="Poista Opiskelija"
+                    HorizontalAlignment="Right"
+                    Padding="10"
+                    Click="poistaOpiskelija_Click" />
+        </Grid>
+        <StackPanel HorizontalAlignment="Right"
+                    VerticalAlignment="Top">
+            <Button x:Name="btnSaveToFile" 
+                    Content="Tallenna Tiedostoon"
+                    Padding="10"
+                    Click="btnSaveToFile_Click" />
+            <Button x:Name="btnLoadFromFile" 
+                    Content="Tuo Tiedostosta"
+                    Padding="10"
+                    Click="btnLoadFromFile_Click" />
+        </StackPanel>
+    </Grid>
+</Window>
