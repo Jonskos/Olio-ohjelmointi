@@ -26,6 +26,7 @@ namespace Harjoitus16
         }
         private void UnitSelectBtn_OnClick(object sender, RoutedEventArgs e)
         {
+            //jos nappi on km muuta se mi, muuten km
             if (unitSelectBtn.Content.ToString() == "km")
             {
                 unitSelectBtn.Content = "mi";
@@ -37,19 +38,24 @@ namespace Harjoitus16
         }
         private void BtnKmToMiles_OnClick(object sender, RoutedEventArgs e)
         {
+            //jos on valittuna kilometrit
             if (unitSelectBtn.Content.ToString() == "km")
             {
+                //ja input on numero
                 if (float.TryParse(kilometersInput.Text, out float kilometers))
                 {
+                    //muunna kilometrit mailiksi, ja tulosta se milesinputtiin
                     milesInput.Text = ConvertKmToMiles(kilometers).ToString();
                 }
                 else { throw new Exception(); }
             }
+            //muuten jos on mailit
             else if (unitSelectBtn.Content.ToString() == "mi")
             {
-                
+                //ja input on numero
                 if (float.TryParse(milesInput.Text, out float miles))
                 {
+                    //muunna mailit kilometreiksi ja tulosta se kilometersinputtiin
                     kilometersInput.Text = ConvertMilesToKm(miles).ToString();
                 }
                 else { throw new Exception(); }
@@ -57,11 +63,13 @@ namespace Harjoitus16
         }
         private float ConvertKmToMiles(float kilometers)
         {
+            //muuntaa kilometrit maileiksi
             float miles = kilometers / 1.6093445f;
             return miles;
         }
         private float ConvertMilesToKm(float miles)
         {
+            //muunna kilometriksi
             float kilometers = miles * 1.6093445f;
             return kilometers;
         }
