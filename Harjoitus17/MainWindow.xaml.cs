@@ -27,6 +27,7 @@ namespace Harjoitus17
         public MainWindow()
         {
             InitializeComponent();
+            //Aseta lähtömuuntujat
             lämpötila = 19;
             keittiöValot = false;
             keittiöValotTila.Text = "Pois";
@@ -42,15 +43,21 @@ namespace Harjoitus17
 
         private void OlohuoneenValotBtn_OnClick(object sender, RoutedEventArgs e)
         {
+            //jos olohuoneenvalot on pois
             if (!olohuoneenValot)
             {
+                //vaihda olohuoneenValot muuntujan tila toiseksi kuin on (päälle)
                 olohuoneenValot = !olohuoneenValot;
+                //ja vaihda textblockien texti samaksi kuin tila
                 olohuoneenValotTila.Text = "Päällä";
                 olohuoneenValotBtn.Content = "Pois";
             }
+            //muuten
             else
             {
+                //vaihda olohuoneenValot muuntujan tila toiseksi kuin on (pois)
                 olohuoneenValot = !olohuoneenValot;
+                //ja vaihda textblockien texti samaksi kuin tila
                 olohuoneenValotTila.Text = "Pois";
                 olohuoneenValotBtn.Content = "Päälle";
             }
@@ -58,15 +65,21 @@ namespace Harjoitus17
 
         private void KeittiöValotBtn_OnClick(object sender, RoutedEventArgs e)
         {
+            //jos keittiönvalot on pois
             if (!keittiöValot)
             {
+                //vaihda keittiöValot muuntujan tila toiseksi kuin on (päälle)
                 keittiöValot = !keittiöValot;
+                //ja vaihda textblockien texti samaksi kuin tila
                 keittiöValotTila.Text = "Päällä";
                 keittiöValotBtn.Content = "Pois";
             }
+            //muuten
             else
             {
+                //vaihda keittiöValot muuntujan tila toiseksi kuin on (pois)
                 keittiöValot = !keittiöValot;
+                //ja vaihda textblockien texti samaksi kuin tila
                 keittiöValotTila.Text = "Pois";
                 keittiöValotBtn.Content = "Päälle";
             }
@@ -74,21 +87,28 @@ namespace Harjoitus17
 
         private void OviLukossaBtn_OnClick(object sender, RoutedEventArgs e)
         {
+            //jos oviLukossa on pois, eli avattuna
             if (!oviLukossa)
             {
+                //vaihda oviLukossa muuntujan tila toiseksi kuin on (päälle)
                 oviLukossa = !oviLukossa;
+                //ja vaihda textblockien texti samaksi kuin tila
                 oviLukossaTila.Text = "Lukossa";
                 oviLukossaBtn.Content = "Avaa";
             }
+            //muuten
             else
             {
+                //vaihda oviLukossa muuntujan tila toiseksi kuin on (pois)
                 oviLukossa = !oviLukossa;
+                //ja vaihda textblockien texti samaksi kuin tila
                 oviLukossaTila.Text = "Avattu";
                 oviLukossaBtn.Content = "Lukitse";
             }
         }
         private void LämpötilaSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
+            //muunna lämpötila muuttuja samaksi kuin lämpötilaSlider, kun sen arvo vaihtuu
             lämpötila = Convert.ToInt32(lämpötilaSlider.Value);
         }
     }
