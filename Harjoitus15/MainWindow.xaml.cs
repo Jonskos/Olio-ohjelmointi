@@ -27,14 +27,17 @@ namespace Harjoitus15
         public int kuormaautotCounter = 0;
         public int henkiloautotCounter = 0;
 
+        //kun clickataan henkilöautonappia
         private void henkilöautoNappi_OnClick(object sender, RoutedEventArgs e)
         {
+            //lisää henkilöauto, ja päivitä henkilöautotextblock
             henkiloautotCounter++;
             henkilöautoText.Text = $"henkilöautoja: {henkiloautotCounter}";
         }
 
         private void kuormaautoNappi_OnClick(object sender, RoutedEventArgs e)
         {
+            //lisää kuormaauto, ja päivitä kuormaautotextblock
             kuormaautotCounter++;
             kuormaautoText.Text = $"kuormaautoja: {kuormaautotCounter}";
         }
