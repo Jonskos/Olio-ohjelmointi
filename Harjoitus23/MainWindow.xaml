@@ -5,8 +5,128 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Harjoitus23"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+        Title="MainWindow"
+        Height="300"
+        Width="500">
+    <Grid Background="LightGray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="auto" />
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Lämpötila: " />
+                <TextBlock Text="{Binding Lämpötila}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Kosteus: " />
+                <TextBlock Text="{Binding Kosteus}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Päällä: " />
+                <TextBlock Text="{Binding Paalla, UpdateSourceTrigger=PropertyChanged}"/>
+            </StackPanel>
+            <Button  x:Name="paallaBtn" Content="Päälle"
+                     Click="paallaBtn_Click"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Margin="10">
+            <StackPanel Orientation="Horizontal">
+                <RadioButton x:Name="lämpötilaRb"
+                             Content="Lämpötila"
+                             Checked="lämpötilaRb_Checked" 
+                             Focusable="False"/>
+                <RadioButton x:Name="kosteusRb"
+                             Content="Kosteus"
+                             Checked="kosteusRb_Checked"
+                             Focusable="False"/>
+            </StackPanel>
+            <StackPanel >
+                <TextBox x:Name="kiuasInputTb"
+                         Height="20"
+                         Margin="5"/>
+                <Grid x:Name="numeroGrid"
+                      ButtonBase.Click="numeroGrid_Click">
+                    <Grid.Resources>
+                        <Style TargetType="Button">
+                            <Setter Property="HorizontalAlignment"
+                                    Value="Center" />
+                            <Setter Property="VerticalAlignment"
+                                    Value="Center" />
+                            <Setter Property="MinWidth"
+                                    Value="40" />
+                            <Setter Property="MinHeight"
+                                    Value="40" />
+                            <Setter Property="Margin"
+                                    Value="2" />
+                            <Setter Property="Focusable"
+                                    Value="False" />
+                        </Style>
+                    </Grid.Resources>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Button x:Name="Laskin1"
+                            Content="1" />
+                    <Button x:Name="Laskin2"
+                            Content="2"
+                            Grid.Column="1" />
+                    <Button x:Name="Laskin3"
+                            Content="3"
+                            Grid.Column="2" />
+                    <Button x:Name="Laskin4"
+                            Content="4"
+                            Grid.Column="0"
+                            Grid.Row="1" />
+                    <Button x:Name="Laskin5"
+                            Content="5"
+                            Grid.Column="1"
+                            Grid.Row="1" />
+                    <Button x:Name="Laskin6"
+                            Content="6"
+                            Grid.Column="2"
+                            Grid.Row="1" />
+                    <Button x:Name="Laskin7"
+                            Content="7"
+                            Grid.Column="0"
+                            Grid.Row="2" />
+                    <Button x:Name="Laskin8"
+                            Content="8"
+                            Grid.Column="1"
+                            Grid.Row="2" />
+                    <Button x:Name="Laskin9"
+                            Content="9"
+                            Grid.Column="2"
+                            Grid.Row="2" />
+                    <Button x:Name="Laskin0"
+                            Content="0"
+                            Grid.Column="0"
+                            HorizontalAlignment="Stretch"
+                            Grid.ColumnSpan="3"
+                            Grid.Row="3" />
+                    <Button x:Name="laskinPienempiKuin"
+                            Content="&lt;"
+                            Grid.Column="3" />
+                    <Button x:Name="LaskinEnter"
+                            Content="Enter"
+                            Grid.Row="1"
+                            Grid.Column="3"
+                            VerticalAlignment="Stretch"
+                            Grid.RowSpan="4" 
+                            Click="LaskinEnter_Click"/>
+                </Grid>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Window>
