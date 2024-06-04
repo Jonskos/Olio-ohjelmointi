@@ -1,14 +1,96 @@
 ﻿<Window x:Class="Harjoitus21.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Harjoitus21"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        xmlns:userControls="clr-namespace:Harjoitus21.View.UserControls"
+        mc:Ignorable="d"    
+        Title="MainWindow"
+        Height="450"
+        Width="800">
     <Grid>
-        <StackPanel x:Name="cartPanel">
-            
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="20*"/>
+        </Grid.ColumnDefinitions>
+        <ScrollViewer VerticalAlignment="Top">
+            <StackPanel Orientation="Vertical" x:Name="shopPanel">
+                <StackPanel.Resources>
+                    <Style TargetType="StackPanel">
+                        <Setter Property="Orientation"
+                                Value="Horizontal" />
+                    </Style>
+                    <Style TargetType="ScrollViewer">
+                        <Setter Property="HorizontalScrollBarVisibility"
+                                Value="Auto" />
+                        <Setter Property="VerticalScrollBarVisibility"
+                                Value="Disabled" />
+                    </Style>
+                    <Style TargetType="userControls:Product">
+                        <EventSetter Event="Checked"
+                                        Handler="Product_CartCheckboxChecked" />
+                    </Style>
+                </StackPanel.Resources>
+                <ScrollViewer>
+                    <StackPanel>
+                        <userControls:Product ProductName="MageGee Portable 60% Mechanical Gaming Keyboard, MK-Box LED Backlit Compact 68 Keys Mini Wired Office Keyboard with Red Switch for Windows Laptop PC Mac - Black/Grey "
+                                                ProductPrice="12.99€"
+                                                ProductImageSource="C:\Users\joonas.melvasalo\Projects\koodaus\C#\Olio-ohjelmointi\Harjoitus21\Img\keyboard1.webp" />
+                        <userControls:Product ProductName="Redragon S101 Gaming Keyboard, M601 Mouse, RGB Backlit Gaming Keyboard, Programmable Backlit Gaming Mouse, Value Combo Set [New Version] "
+                                                ProductPrice="39.99€"
+                                                ProductImageSource="C:\Users\joonas.melvasalo\Projects\koodaus\C#\Olio-ohjelmointi\Harjoitus21\Img\keyboard2.webp" />
+                        <userControls:Product ProductName="Hauska keyboard"
+                                                ProductPrice="69.99€"
+                                                ProductImageSource="C:\Users\joonas.melvasalo\Projects\koodaus\C#\Olio-ohjelmointi\Harjoitus21\Img\keyboard3.webp" />
+                        <userControls:Product ProductName="Keyboard keyboard"
+                                                ProductPrice="420.69€"
+                                                ProductImageSource="C:\Users\joonas.melvasalo\Projects\koodaus\C#\Olio-ohjelmointi\Harjoitus21\Img\keyboard4.webp" />
+                        <userControls:Product ProductName="Portable keyboard"
+                                                ProductPrice="1.12€"
+                                                ProductImageSource="C:\Users\joonas.melvasalo\Projects\koodaus\C#\Olio-ohjelmointi\Harjoitus21\Img\keyboard5.webp" />
+                        <userControls:Product ProductName=" Amazon Basics Low-Profile Wired USB Keyboard with US Layout (QWERTY), Matte Black "
+                                                ProductPrice="18.99€"
+                                                ProductImageSource="C:\Users\joonas.melvasalo\Projects\koodaus\C#\Olio-ohjelmointi\Harjoitus21\Img\keyboard6.webp" />
+
+                    </StackPanel>
+                </ScrollViewer>
+                <StackPanel>
+                    <userControls:Product ProductName="Mr beast pro kuulokkeet"
+                                            ProductPrice="101.99€"
+                                            ProductImageSource="C:\Users\joonas.melvasalo\Projects\koodaus\C#\Olio-ohjelmointi\Harjoitus21\Img\kuuloke1.webp" />
+                    <userControls:Product ProductName="Beats pro kuulokket"
+                                            ProductPrice="250.99€"
+                                            ProductImageSource="C:\Users\joonas.melvasalo\Projects\koodaus\C#\Olio-ohjelmointi\Harjoitus21\Img\kuuloke2.webp" />
+                    <userControls:Product ProductName="Ample 12DD ultra bass boost pro max"
+                                            ProductPrice="999.99€"
+                                            ProductImageSource="C:\Users\joonas.melvasalo\Projects\koodaus\C#\Olio-ohjelmointi\Harjoitus21\Img\kuuloke3.webp" />
+                </StackPanel>
+                <ScrollViewer>
+                    <StackPanel>
+                        <userControls:Product ProductName="Acer aspire 1"
+                                                ProductPrice="299.99€"
+                                                ProductImageSource="C:\Users\joonas.melvasalo\Projects\koodaus\C#\Olio-ohjelmointi\Harjoitus21\Img\läppäri1.webp" />
+                        <userControls:Product ProductName="ultra gaming läppäri"
+                                                ProductPrice="500.99€"
+                                                ProductImageSource="C:\Users\joonas.melvasalo\Projects\koodaus\C#\Olio-ohjelmointi\Harjoitus21\Img\läppäri2.webp" />
+                        <userControls:Product ProductName="epic 2090ti alienware läppäri"
+                                                ProductPrice="500.99€"
+                                                ProductImageSource="C:\Users\joonas.melvasalo\Projects\koodaus\C#\Olio-ohjelmointi\Harjoitus21\Img\läppäri3.webp" />
+                    </StackPanel>
+                </ScrollViewer>
+            </StackPanel>
+        </ScrollViewer>
+        <StackPanel x:Name="cartPanel"
+                    Grid.Column="1"
+                    HorizontalAlignment="Right"
+                    Width="150"
+                    Panel.ZIndex="1">
         </StackPanel>
+        <Button x:Name="clearCartBtn" 
+                Content="osta kaikki"
+                Grid.Column="1"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Bottom"
+                Click="clearCartBtn_Click" />
     </Grid>
 </Window>
