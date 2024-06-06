@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="Harjoitus26.View.UserControls.Tehtävä"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Harjoitus26.View.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="50" d:DesignWidth="400">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Nimi: " />
+                <TextBlock x:Name="tehtäväNimi"
+                           Text="{Binding Nimi}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Antaja" />
+                <TextBlock x:Name="tehtäväAntaja"
+                           Text="{Binding Antaja}" />
+            </StackPanel>
+        </StackPanel>
+        <CheckBox x:Name="tehtäväTehty"
+                  Content="Tehty"
+                  Grid.Column="1"
+                  VerticalAlignment="Center"
+                  HorizontalAlignment="Center"
+                  IsChecked="{Binding Tehty}"/>
+    </Grid>
+</UserControl>
